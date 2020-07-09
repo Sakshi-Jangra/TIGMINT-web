@@ -21,12 +21,13 @@
 
     <!-- Css Files -->
     <link rel="stylesheet" href="./css/backgrounds.css" />
+    <link rel="stylesheet" href="./css/bootstrap-style.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/preloader.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./css/bootstrap-style.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
 
     <!-- fonts -->
     <link
@@ -39,14 +40,19 @@ font-family: 'Open Sans', sans-serif; -->
     <!-- JS Files Imported here -->
     <script type="text/javascript" src="./js/nav.js"></script>
   </head>
-  <body>
+
+  <body onload="wait()">
     <!-- HEADER -->
     <header>
       <div class="topnav" id="myTopnav">
-        <img class="logo-top" src="./img/tigmint_logo.png" />
-        <a href="#home" class="active">Get Started</a>
-        <a href="#news">Documentation</a>
-        <a href="#contact">Contact Us</a>
+        <img
+          onclick="location.href='index.html'"
+          class="logo-top"
+          src="./img/tigmint_logo.png"
+        />
+        <a href="index.html" class="active">Get Started</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="contact.html">Contact Us</a>
         <a href="javascript:void(0);" class="icon" onclick="navRes()">
           <i class="fa fa-bars"></i>
         </a>
@@ -55,26 +61,32 @@ font-family: 'Open Sans', sans-serif; -->
     <!-- HEADER ends here -->
 
     <main class="main">
-      <img style="width: 100%;" src="../img/work.png" />
-      <div
-        style="
-          align-items: center;
-          width: 30%;
-          margin-left: 35%;
-          margin-top: -45%;
-        "
-      >
-        <h1>
-          SOCMINT
-        </h1>
-        <h3>Social Media Intelligence</h3>
-        <p>
-          Social media intelligence refers to the collective tools and solutions
-          that allow organizations to and conversations, respond to social
-          signals and synthesize social data points into meaningful trends and
-          analysis based on the user's needs.
-        </p>
+      <div class="flex-container">
+        <div>
+          <img
+            src="./img/osint-working.png"
+            style="width: 100%; background-color: #ededed;"
+          />
+        </div>
+        <!--  topic  -->
+        <div
+          style="align-items: left; left: 0; margin-top: -50%; padding: 5px;"
+        >
+          <h1>
+            SOCMINT
+          </h1>
+
+          <p>
+            Social Media Intelligence:
+            <br />Social media intelligence refers to the collective tools and
+            solutions that allow organizations to and conversations, respond to
+            social signals and synthesize social data points into meaningful
+            trends and analysis based on the user's needs.
+          </p>
+        </div>
       </div>
+
+      <!-- 
       <div
         style="
           align-items: center;
@@ -119,60 +131,63 @@ font-family: 'Open Sans', sans-serif; -->
           repudiandaem dolor sit amet consectetur adipisicing elit. Delectus et
           repudiandae .
         </h4>
-      </div>
+      </div> -->
     </main>
+
+    <!--  Footer here -->
     <footer class="footer-distributed">
       <div class="footer-left">
-        <h3>Company<span>logo</span></h3>
-
+        <img src="./img/footer-logo.png" />
         <p class="footer-links">
-          <a href="#" class="link-1">Home</a>
-
-          <a href="#">Blog</a>
-
-          <a href="#">Pricing</a>
-
-          <a href="#">About</a>
-
-          <a href="#">Faq</a>
-
-          <a href="#">Contact</a>
+          <a href="./documentation.html" class="link-1">Documentation</a>
+          <a href="./contact.html">Contact Us</a>
         </p>
-
-        <p class="footer-company-name">Company Name © 2015</p>
+        <p>TiGMint © 2020</p>
       </div>
 
       <div class="footer-center">
-        <div>
-          <i class="fa fa-map-marker"></i>
-          <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
-        </div>
-
-        <div>
-          <i class="fa fa-phone"></i>
-          <p>+1.555.555.5555</p>
-        </div>
-
-        <div>
-          <i class="fa fa-envelope"></i>
-          <p><a href="mailto:support@company.com">support@company.com</a></p>
-        </div>
+        <h1>MADE in INDIA</h1>
+        <hr />
+        <p>
+          This Website is made under the Gurugram Police Cyber Security
+          Internship.
+        </p>
+        <hr />
+        Stay Safe! Stay Secure!
       </div>
 
       <div class="footer-right">
         <p class="footer-company-about">
-          <span>About the company</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-          euismod convallis velit, eu auctor lacus vehicula sit amet.
+          <span>About TIGMINT</span>
+          Twitter, Instagram, GeoTagging Media Intelligence
         </p>
 
         <div class="footer-icons">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-github"></i></a>
+          <a target="_blank" href="./contact.html"
+            ><i class="fa fa-group"></i
+          ></a>
+          <a target="_blank" href="https://github.com/Yajassardana/TIGMINT"
+            ><i class="fa fa-github"></i
+          ></a>
         </div>
       </div>
     </footer>
+
+    <div id="waiting" class="loader-wrapper">
+      <!-- Loading square for squar.red network -->
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <script>
+      // $(window).on("load", function(){
+      //   $(".loader-wrapper").fadeOut("slow");
+      // });
+      var preloader = document.getElementById('waiting');
+      function wait() {
+      	setTimeout(function(){
+      	preloader.style.display = 'none';	
+      }, 3000);
+      }
+    </script>
   </body>
 </html>

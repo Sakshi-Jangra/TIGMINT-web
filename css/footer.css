@@ -40,7 +40,7 @@ section {
 /* Footer left */
 
 .footer-distributed .footer-left {
-  width: 40%;
+  width: 33%;
 }
 
 /* The company logo */
@@ -81,7 +81,8 @@ section {
 /* Footer Center */
 
 .footer-distributed .footer-center {
-  width: 35%;
+  width: 30%;
+  margin-right: 5%;
 }
 
 .footer-distributed .footer-center i {
@@ -139,13 +140,13 @@ section {
 /* Footer Right */
 
 .footer-distributed .footer-right {
-  width: 20%;
+  width: 30%;
 }
 
 .footer-distributed .footer-company-about {
   line-height: 20px;
   color: #92999f;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
   margin: 0;
 }
@@ -153,7 +154,7 @@ section {
 .footer-distributed .footer-company-about span {
   display: block;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -179,7 +180,6 @@ section {
   margin-bottom: 5px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
   .footer-distributed {

@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TiGMint</title>
 
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
     <!-- Css Files -->
     <link rel="stylesheet" href="./css/backgrounds.css" />
+    <link rel="stylesheet" href="./css/bootstrap-style.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/preloader.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -24,27 +41,78 @@ font-family: 'Open Sans', sans-serif; -->
     <script type="text/javascript" src="./js/nav.js"></script>
   </head>
 
-  <body>
+  <body onload="wait()">
     <!-- HEADER -->
     <header>
-      <div class="flex-container">
-        <div class="topnav" id="myTopnav">
-          <img class="logo-top" src="./img/tigmint_logo.png" />
-          <a href="#home" class="active">Get Started</a>
-          <a href="#news">Documentation</a>
-          <a href="#contact">Contact Us</a>
-          <a href="javascript:void(0);" class="icon" onclick="navRes()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
+      <div class="topnav" id="myTopnav">
+        <img
+          onclick="location.href='index.html'"
+          class="logo-top"
+          src="./img/tigmint_logo.png"
+        />
+        <a href="index.html">Get Started</a>
+        <a href="documentation.html" class="active">Documentation</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="navRes()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </header>
     <!-- HEADER ends here -->
-    <footer class="bg-1">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolore
-      minus debitis ratione repellat voluptates harum dolorum sunt esse impedit
-      architecto atque, dolor quisquam voluptate provident molestiae cumque
-      laborum laudantium!
+
+    <!--  Footer here -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <img src="./img/footer-logo.png" />
+        <p class="footer-links">
+          <a href="./documentation.html" class="link-1">Documentation</a>
+          <a href="./contact.html">Contact Us</a>
+        </p>
+        <p>TiGMint © 2020</p>
+      </div>
+
+      <div class="footer-center">
+        <h1>MADE in INDIA</h1>
+        <hr />
+        <p>
+          This Website is made under the Gurugram Police Cyber Security
+          Internship.
+        </p>
+        <hr />
+        Stay Safe! Stay Secure!
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About TIGMINT</span>
+          Twitter, Instagram, GeoTagging Media Intelligence
+        </p>
+
+        <div class="footer-icons">
+          <a target="_blank" href="./contact.html"
+            ><i class="fa fa-group"></i
+          ></a>
+          <a target="_blank" href="https://github.com/Yajassardana/TIGMINT"
+            ><i class="fa fa-github"></i
+          ></a>
+        </div>
+      </div>
     </footer>
+
+    <!-- loader -->
+    <div id="waiting" class="loader-wrapper">
+      <!-- Loading square for squar.red network -->
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <script>
+      // $(window).on("load", function(){
+      //   $(".loader-wrapper").fadeOut("slow");
+      // });
+      var preloader = document.getElementById('waiting');
+      function wait() {
+        preloader.style.display = 'none';
+      }
+    </script>
   </body>
 </html>

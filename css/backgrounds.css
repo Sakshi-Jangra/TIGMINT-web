@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
 }
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #f1f2f3 url(https://loading.io/asset/389368) no-repeat center;
+  z-index: 100000;
+}
 
 .header,
 .footer,
@@ -14,23 +21,14 @@ h6 {
   font-family: 'Open Sans', sans-serif;
 }
 
-p {
-  font-size: 20px;
-}
 .logo-top {
-  width: 15%;
-  height: 20%;
+  width: 10%;
   float: left;
   margin-right: 10px;
 }
 
 .main {
-  margin-top: 60px;
-  padding: 20px;
-}
-
-footer {
-  background: linear-gradient(90deg, grey, rgb(43, 28, 0));
+  margin-top: 45px;
 }
 
 .bg-1 {
