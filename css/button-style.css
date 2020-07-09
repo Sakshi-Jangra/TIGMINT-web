@@ -6,6 +6,16 @@ body {
   background: #fff;
   color: #fff;
 }
+.jumbotron {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: rgb(238, 238, 238);
+  padding: 18px 15px;
+  z-index: -100;
+  overflow: hidden;
+}
+
 .jumbotron h1 {
   color: #000000;
 }
@@ -103,8 +113,9 @@ a.animated-button.thar-one {
   cursor: pointer;
   display: block;
   position: relative;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  margin-bottom: 30px;
 }
 a.animated-button.thar-one:hover {
   color: #fff !important;
@@ -206,7 +217,7 @@ a.animated-button.thar-three:before {
 
 /*  ------------------------------------------------------  button 4 */
 a.animated-button.thar-four {
-  color: #fff;
+  color: #ff8902;
   cursor: pointer;
   display: block;
   position: relative;

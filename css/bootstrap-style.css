@@ -1,3 +1,11 @@
+.btn-group-sm > .btn,
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 100px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
 .flex-container {
   display: grid;
   flex-wrap: wrap;

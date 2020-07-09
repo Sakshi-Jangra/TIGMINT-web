@@ -52,7 +52,9 @@ font-family: 'Open Sans', sans-serif; -->
     <!-- JS Files Imported here -->
     <script type="text/javascript" src="./js/nav.js"></script>
   </head>
-
+  <script>
+    src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script>
   <body onload="wait()">
     <!-- HEADER -->
     <header>
@@ -164,27 +166,78 @@ font-family: 'Open Sans', sans-serif; -->
     </div>
 
     <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-6">
-        <a href="#" class="btn btn-sm animated-button thar-one"
-          >Account Finder</a
-        >
+      <div id="btnClick1" class="col-md-3 col-sm-3 col-xs-6">
+        <a class="btn btn-sm animated-button thar-one">Account Finder</a>
       </div>
-      <div class="col-md-3 col-sm-3 col-xs-6">
-        <a href="#" class="btn btn-sm animated-button thar-two"
-          >Twitter Module</a
-        >
+      <div id="btnClick2" class="col-md-3 col-sm-3 col-xs-6">
+        <a class="btn btn-sm animated-button thar-two">Twitter Module</a>
       </div>
-      <div class="col-md-3 col-sm-3 col-xs-6">
-        <a href="#" class="btn btn-sm animated-button thar-three"
-          >Instagram Module</a
-        >
+      <div id="btnClick3" class="col-md-3 col-sm-3 col-xs-6">
+        <a class="btn btn-sm animated-button thar-three">Instagram Module</a>
       </div>
-      <div class="col-md-3 col-sm-3 col-xs-6">
-        <a href="#" class="btn btn-sm animated-button thar-four">Meta Data</a>
+      <div id="btnClick4" class="col-md-3 col-sm-3 col-xs-6">
+        <a class="btn btn-sm animated-button thar-four">Meta Data</a>
       </div>
     </div>
 
-    <!--  Footer here -->
+    <!-- ----------------OUTPUT -------------------------------- -->
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1>Analysis</h1>
+        <p style="color: #888;">
+          Analysed output from backend is displayed here...
+        </p>
+      </div>
+      <div style="width: 100%; color: darkslategrey;">
+        <div id="0">
+          OUTPUT
+        </div>
+        <div id="1" style="display: none;">
+          My Dynamic tiwrt
+        </div>
+        <div id="2" style="display: none;">
+          My Dynamic insta
+        </div>
+        <div id="3" style="display: none;">
+          My Dynamic meta
+        </div>
+        <div id="4" style="display: none;">
+          My Dynamic account
+        </div>
+      </div>
+    </div>
+    <script>
+      //   ----------------- ----------- OUTPUT manipulation -----------------------------
+      $('#btnClick1').on('click', function () {
+        if ($('#0').css('display') != 'none') {
+          $('#1').show().siblings('div').hide();
+        } else if ($('#1').css('display') != 'none') {
+          $('#0').show().siblings('div').hide();
+        }
+      });
+      $('#btnClick2').on('click', function () {
+        if ($('#0').css('display') != 'none') {
+          $('#2').show().siblings('div').hide();
+        } else if ($('#2').css('display') != 'none') {
+          $('#0').show().siblings('div').hide();
+        }
+      });
+      $('#btnClick3').on('click', function () {
+        if ($('#0').css('display') != 'none') {
+          $('#3').show().siblings('div').hide();
+        } else if ($('#3').css('display') != 'none') {
+          $('#0').show().siblings('div').hide();
+        }
+      });
+      $('#btnClick4').on('click', function () {
+        if ($('#0').css('display') != 'none') {
+          $('#4').show().siblings('div').hide();
+        } else if ($('#4').css('display') != 'none') {
+          $('#0').show().siblings('div').hide();
+        }
+      });
+    </script>
+    <!--  --------------------------------- Footer here  ----------------------------------      -->
     <footer class="footer-distributed">
       <div class="footer-left">
         <img src="./img/footer-logo.png" />
