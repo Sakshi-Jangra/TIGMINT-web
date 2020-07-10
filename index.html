@@ -198,8 +198,11 @@ font-family: 'Open Sans', sans-serif; -->
         <div id="1" style="display: none;">
           My Dynamic tiwrt
         </div>
-        <div id="2" style="display: none;">
-          My Dynamic insta
+        <div id="2">
+          <form class="backdrop" id="content">
+            <input type="text" name="input" class="input" id="search-input" />
+            <button type="reset" class="search" id="search-btn"></button>
+          </form>
         </div>
         <div id="3" style="display: none;">
           My Dynamic meta
@@ -209,6 +212,59 @@ font-family: 'Open Sans', sans-serif; -->
         </div>
       </div>
     </div>
+    <script>
+      //  -------------------------------------search bar -----------------
+
+      $('.dropdown dt a').on('click', function () {
+        $('.dropdown dd ul').slideToggle('fast');
+      });
+
+      $('.dropdown dd ul li a').on('click', function () {
+        $('.dropdown dd ul').hide();
+      });
+
+      function getSelectedValue(id) {
+        return $('#' + id)
+          .find('dt a span.value')
+          .html();
+      }
+
+      $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass('dropdown'))
+          $('.dropdown dd ul').hide();
+      });
+
+      $('.mutliSelect input[type="checkbox"]').on('click', function () {
+        var title = $(this)
+            .closest('.mutliSelect')
+            .find('input[type="checkbox"]')
+            .val(),
+          title = $(this).val() + ',';
+
+        if ($(this).is(':checked')) {
+          var html = '<span title="' + title + '">' + title + '</span>';
+          $('.multiSel').append(html);
+          $('.hida').hide();
+        } else {
+          $('span[title="' + title + '"]').remove();
+          var ret = $('.hida');
+          $('.dropdown dt a').append(ret);
+        }
+      });
+
+      // search -bar ======================
+
+      const input = document.getElementById('search-input');
+      const searchBtn = document.getElementById('search-btn');
+
+      const expand = () => {
+        searchBtn.classList.toggle('close');
+        input.classList.toggle('square');
+      };
+
+      searchBtn.addEventListener('click', expand);
+    </script>
 
     <!-- ------------------- OUTPUT manipulation jQuery & JavaScript ------------------- -->
     <script>

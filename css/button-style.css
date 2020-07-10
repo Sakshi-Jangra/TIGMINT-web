@@ -258,13 +258,3 @@ a.animated-button.thar-four:before {
   background: #f7ca18;
   transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-
-/* ------------------     OUTPUT Display settings here ------------ */
-
-ul.nav-pills {
-  top: 20px;
-  position: fixed;
-}
-div.col-8 div {
-  height: 500px;
-}
