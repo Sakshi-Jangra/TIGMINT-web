@@ -191,6 +191,7 @@ font-family: 'Open Sans', sans-serif; -->
           Analysed output from backend is displayed here...
         </p>
       </div>
+
       <div style="width: 100%; color: darkslategrey;">
         <div id="0">
           OUTPUT
@@ -198,11 +199,122 @@ font-family: 'Open Sans', sans-serif; -->
         <div id="1" style="display: none;">
           My Dynamic tiwrt
         </div>
-        <div id="2">
-          <form class="backdrop" id="content">
-            <input type="text" name="input" class="input" id="search-input" />
-            <button type="reset" class="search" id="search-btn"></button>
-          </form>
+        <div id="2" style="display: none;">
+          <div id="sample">
+            <h2>Contact Form</h2>
+            <p>
+              Please click "Submit" after making your selections. Thank you.
+            </p>
+            <form id="my-form">
+              <div id="align">
+                <input
+                  type="hidden"
+                  name="required"
+                  value="name,phone,email"
+                /><br />
+                <input
+                  type="hidden"
+                  name="title"
+                  value="Thank you for contacting Keynote Support"
+                /><br />
+                <input
+                  type="hidden"
+                  name="return_link_url"
+                  value="https://www.keynotesupport.com/index.shtml"
+                />
+                <input
+                  type="hidden"
+                  name="return_link_title"
+                  value="Go to the Homepage"
+                />
+                <label for="name1">NAME:</label><br />
+                <span
+                  ><input
+                    type="text"
+                    name="name"
+                    id="name1"
+                    class="data-entry" /></span
+                ><br /><br />
+                <label for="tel">PHONE:</label><br />
+                <span
+                  ><input
+                    type="tel"
+                    name="phone"
+                    id="tel"
+                    class="data-entry" /></span
+                ><br /><br />
+                <label for="email">E-MAIL ADDRESS:</label><br />
+                <span
+                  ><input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="data-entry" /></span
+                ><br /><br />
+                <p>SELECT A SOFTWARE PRODUCT:</p>
+                <br />
+                <span class="radio"
+                  ><input type="radio" name="software" value="Excel" />Microsoft
+                  Excel</span
+                ><br />
+                <span class="radio"
+                  ><input type="radio" name="software" value="QBP" />QuickBooks
+                  Pro</span
+                ><br />
+                <span class="radio"
+                  ><input
+                    type="radio"
+                    name="software"
+                    value="Peachtree"
+                  />Peachtree Accounting</span
+                ><br />
+                <span class="radio"
+                  ><input type="radio" name="software" value="Photoshop" />Adobe
+                  Photoshop</span
+                ><br /><br />
+
+                <p>WHAT IS YOUR CURRENT LEVEL?</p>
+                <br />
+                <span class="radio"
+                  ><input
+                    type="radio"
+                    name="level"
+                    value="Beginner"
+                  />Beginner</span
+                ><br />
+                <span class="radio"
+                  ><input
+                    type="radio"
+                    name="level"
+                    value="Intermediate"
+                  />Intermediate</span
+                ><br />
+                <span class="radio"
+                  ><input
+                    type="radio"
+                    name="level"
+                    value="Advanced"
+                  />Advanced</span
+                ><br /><br />
+
+                <label for="comments3">COMMENTS:</label><br />
+                <span>
+                  <textarea
+                    name="comments"
+                    id="comments3"
+                    rows="4"
+                  ></textarea></span
+                ><br /><br />
+
+                <span
+                  ><input type="reset" class="button" value="RESET" />
+                  <input type="submit" class="button" value="SUBMIT" /></span
+                ><br />
+              </div>
+              <!--end div align-->
+            </form>
+          </div>
+          <!--end div sample-->
         </div>
         <div id="3" style="display: none;">
           My Dynamic meta
@@ -212,85 +324,55 @@ font-family: 'Open Sans', sans-serif; -->
         </div>
       </div>
     </div>
-    <script>
-      //  -------------------------------------search bar -----------------
-
-      $('.dropdown dt a').on('click', function () {
-        $('.dropdown dd ul').slideToggle('fast');
-      });
-
-      $('.dropdown dd ul li a').on('click', function () {
-        $('.dropdown dd ul').hide();
-      });
-
-      function getSelectedValue(id) {
-        return $('#' + id)
-          .find('dt a span.value')
-          .html();
-      }
-
-      $(document).bind('click', function (e) {
-        var $clicked = $(e.target);
-        if (!$clicked.parents().hasClass('dropdown'))
-          $('.dropdown dd ul').hide();
-      });
-
-      $('.mutliSelect input[type="checkbox"]').on('click', function () {
-        var title = $(this)
-            .closest('.mutliSelect')
-            .find('input[type="checkbox"]')
-            .val(),
-          title = $(this).val() + ',';
-
-        if ($(this).is(':checked')) {
-          var html = '<span title="' + title + '">' + title + '</span>';
-          $('.multiSel').append(html);
-          $('.hida').hide();
-        } else {
-          $('span[title="' + title + '"]').remove();
-          var ret = $('.hida');
-          $('.dropdown dt a').append(ret);
-        }
-      });
-
-      // search -bar ======================
-
-      const input = document.getElementById('search-input');
-      const searchBtn = document.getElementById('search-btn');
-
-      const expand = () => {
-        searchBtn.classList.toggle('close');
-        input.classList.toggle('square');
-      };
-
-      searchBtn.addEventListener('click', expand);
-    </script>
 
     <!-- ------------------- OUTPUT manipulation jQuery & JavaScript ------------------- -->
     <script>
       $('#btnClick1').on('click', function () {
-        if ($('#0').css('display') != 'none') {
+        if (
+          $('#0').css('display') != 'none' ||
+          $('#2').css('display') != 'none' ||
+          $('#3').css('display') != 'none' ||
+          $('#4').css('display') != 'none'
+        ) {
           $('#1').show().siblings('div').hide();
         } else if ($('#1').css('display') != 'none') {
           $('#0').show().siblings('div').hide();
         }
       });
+
       $('#btnClick2').on('click', function () {
-        if ($('#0').css('display') != 'none') {
+        if (
+          $('#0').css('display') != 'none' ||
+          $('#1').css('display') != 'none' ||
+          $('#3').css('display') != 'none' ||
+          $('#4').css('display') != 'none'
+        ) {
           $('#2').show().siblings('div').hide();
         } else if ($('#2').css('display') != 'none') {
           $('#0').show().siblings('div').hide();
         }
       });
+
       $('#btnClick3').on('click', function () {
-        if ($('#0').css('display') != 'none') {
+        if (
+          $('#0').css('display') != 'none' ||
+          $('#1').css('display') != 'none' ||
+          $('#2').css('display') != 'none' ||
+          $('#4').css('display') != 'none'
+        ) {
           $('#3').show().siblings('div').hide();
         } else if ($('#3').css('display') != 'none') {
           $('#0').show().siblings('div').hide();
         }
       });
+
       $('#btnClick4').on('click', function () {
-        if ($('#0').css('display') != 'none') {
+        if (
+          $('#0').css('display') != 'none' ||
+          $('#1').css('display') != 'none' ||
+          $('#2').css('display') != 'none' ||
+          $('#3').css('display') != 'none'
+        ) {
           $('#4').show().siblings('div').hide();
         } else if ($('#4').css('display') != 'none') {
           $('#0').show().siblings('div').hide();
