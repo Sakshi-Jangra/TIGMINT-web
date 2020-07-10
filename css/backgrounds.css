@@ -145,16 +145,20 @@ h6 {
   padding: 0.1em 0.5em;
 }
 #my-form .button {
-  width: 80px;
-  height: 30px;
-  font-size: 110%;
-  margin: 0.4em;
+  width: 90px;
+  height: 40px;
+  font-size: 140%;
+  background-color: #1eff81;
+  margin-left: 95%;
+  margin-bottom: 5%;
+  color: black;
 }
 #my-form .radio {
   white-space: nowrap;
   display: inline-block;
   line-height: 2em;
   margin: 0.1em 0;
+  font-size: 20px;
 }
 #my-form input[type='radio'] {
   margin-right: 0.6em;
