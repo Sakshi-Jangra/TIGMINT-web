@@ -1,4 +1,5 @@
-# TIGMINT
+# TIGMINT    
+Your site is ready to be published at https://sakshi-25.github.io/TIGMINT/.
 
 The tool is divided basically into three module 
 Module I: Twitter
