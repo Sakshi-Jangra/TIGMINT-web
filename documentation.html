@@ -107,14 +107,12 @@ font-family: 'Open Sans', sans-serif; -->
       <!-- Loading square for squar.red network -->
       <span class="loader"><span class="loader-inner"></span></span>
     </div>
-
     <script>
-      // $(window).on("load", function(){
-      //   $(".loader-wrapper").fadeOut("slow");
-      // });
       var preloader = document.getElementById('waiting');
       function wait() {
-        preloader.style.display = 'none';
+        setTimeout(function () {
+          preloader.style.display = 'none';
+        }, 2000);
       }
     </script>
   </body>

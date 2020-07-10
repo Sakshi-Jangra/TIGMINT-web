@@ -109,12 +109,11 @@ font-family: 'Open Sans', sans-serif; -->
     </div>
 
     <script>
-      // $(window).on("load", function(){
-      //   $(".loader-wrapper").fadeOut("slow");
-      // });
       var preloader = document.getElementById('waiting');
       function wait() {
-        preloader.style.display = 'none';
+        setTimeout(function () {
+          preloader.style.display = 'none';
+        }, 2000);
       }
     </script>
   </body>

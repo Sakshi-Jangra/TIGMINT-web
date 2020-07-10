@@ -5,13 +5,13 @@ body {
   font-family: 'Lato', sans-serif;
   background: #fff;
   color: #fff;
+  position: relative;
 }
 .jumbotron {
-  margin-top: 20px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: rgb(238, 238, 238);
-  padding: 18px 15px;
+  background-color: rgb(237, 237, 237);
+  padding: 40px 40px;
   z-index: -100;
   overflow: hidden;
 }
@@ -19,6 +19,16 @@ body {
 .jumbotron h1 {
   color: #000000;
 }
+
+.btn-group-sm > .btn,
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 30px;
+  line-height: 1.5;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
 footer {
   margin-bottom: 0 !important;
   margin-top: 80px;
@@ -39,6 +49,7 @@ h2 {
 .mrng-60-top {
   margin-top: 10px;
 }
+
 /* Global Button Styles */
 a.animated-button:link,
 a.animated-button:visited {
@@ -246,4 +257,14 @@ a.animated-button.thar-four:before {
   color: #000 !important;
   background: #f7ca18;
   transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+}
+
+/* ------------------     OUTPUT Display settings here ------------ */
+
+ul.nav-pills {
+  top: 20px;
+  position: fixed;
+}
+div.col-8 div {
+  height: 500px;
 }
