@@ -1,5 +1,5 @@
 # TIGMINT   under GPCSSI'20
-Your site is ready to be published at  https://sakshi-25.github.io/TIGMINT-web/
+Site is published at  https://sakshi-25.github.io/TIGMINT-web/
 
 > Twitter,Instagram and GeoTagging Media Intelligence
 One-stop information about Social Networking sites.
